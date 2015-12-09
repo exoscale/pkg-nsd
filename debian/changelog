@@ -1,6 +1,7 @@
 nsd (4.1.6-1~precise0+exo1) precise; urgency=medium
 
   * Backport for Precise.
+     + Disable use of dh_systemd.
 
  -- Vincent Bernat <bernat@debian.org>  Wed, 09 Dec 2015 10:15:18 +0100
 
