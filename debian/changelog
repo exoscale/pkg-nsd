@@ -1,15 +1,65 @@
-nsd (4.0.1-1ubuntu0.1~precise0+exo1) precise; urgency=medium
+nsd (4.1.6-1) unstable; urgency=medium
 
-  * Backport for Precise.
+  * Imported Upstream version 4.1.6
+  * Rebase patches on top of 4.1.6 release
+  * Move nsd under pkg-dns umbrella
 
- -- Vincent Bernat <bernat@debian.org>  Wed, 02 Dec 2015 17:26:31 +0100
+ -- Ondřej Surý <ondrej@debian.org>  Fri, 04 Dec 2015 14:49:08 +0100
 
-nsd (4.0.1-1ubuntu0.1) trusty-proposed; urgency=low
+nsd (4.1.2-1) unstable; urgency=medium
 
-  * Fix "invalid user: nsd" install error by moving auto-generated
-    debhelper code to the end of the postinst script. (LP: #1311886)
+  * New upstream version 4.1.2
+  * Refresh patches for version 4.1.2
 
- -- Evan Broder <evan@ebroder.net>  Sun, 11 Jan 2015 17:55:51 +0100
+ -- Ondřej Surý <ondrej@debian.org>  Thu, 21 May 2015 08:37:56 +0200
+
+nsd (4.1.0-3) unstable; urgency=medium
+
+  * Add --with=systemd to dh call, since the service was disabled
+    at the installation
+
+ -- Ondřej Surý <ondrej@debian.org>  Thu, 05 Feb 2015 16:41:43 +0100
+
+nsd (4.1.0-2) unstable; urgency=medium
+
+  [ Jonathan Dupart ]
+  * Fix "invalid user: 'nsd'" move the debhelper tag at the end of the
+    postinst script (Closes: #743396)
+
+  [ Julien Cristau ]
+  * Stop using dh_installdocs --link-doc, as that makes nsd binNMU-unsafe.
+    Deal with the symlink-to-dir migration.
+
+  [ Ondřej Surý ]
+  * Add ${misc:Pre-Depends} to pull new dpkg before calling symlink_to_dir
+  * Call wrap-and-sort -a on d/control and d/copyright
+
+ -- Ondřej Surý <ondrej@debian.org>  Tue, 18 Nov 2014 11:17:39 +0100
+
+nsd (4.1.0-1) unstable; urgency=medium
+
+  * New upstream version 4.1.0
+
+ -- Ondřej Surý <ondrej@debian.org>  Thu, 04 Sep 2014 16:12:28 +0200
+
+nsd (4.0.3-2) unstable; urgency=low
+
+  * Raise maximum number of listening IP addresses to 1024
+    (Closes: #759012)
+  * Debconf templates and debian/control review (Closes: #729624)
+
+  * Debconf translation updates (da, ru, fr,de, pl, pt, pt_BR, ja,
+    it, es, sv, cs)
+    (Closes: #732164, #732190, #732455, #733138, #733183, #733203,
+             #733225, #733235, #733243, #733254, #734582)
+ -- Ondřej Surý <ondrej@debian.org>  Mon, 25 Aug 2014 13:45:52 +0200
+
+nsd (4.0.3-1) unstable; urgency=medium
+
+  * New upstream version 4.0.3
+  * Update patches for 4.0.3 release
+
+ -- Ondřej Surý <ondrej@debian.org>  Tue, 25 Mar 2014 16:08:13 +0100
 
 nsd (4.0.1-1) unstable; urgency=low
 
