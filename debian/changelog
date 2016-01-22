@@ -1,3 +1,9 @@
+nsd (4.1.6-1~precise0+exo2) precise; urgency=medium
+
+  * Put nsd-checkzone in /usr/bin as well. No need to be root to run it.
+
+ -- Vincent Bernat <bernat@debian.org>  Fri, 22 Jan 2016 20:20:28 +0100
+
 nsd (4.1.6-1~precise0+exo1) precise; urgency=medium
 
   * Backport for Precise.
